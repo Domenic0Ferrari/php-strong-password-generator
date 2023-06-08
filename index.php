@@ -1,6 +1,10 @@
 <?php
-$arr_character = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()[]';
-$password_lenght = isset($_GET['password']) ?? '';
+$password_length = isset($_GET['password']) ?? '';
+function generate_password($length)
+{
+    $arr_character = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()[]';
+    return str_shuffle(str_repeat($arr_character, $length));
+};
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +38,12 @@ $password_lenght = isset($_GET['password']) ?? '';
                 <a href="/php-strong-password-generator" type="reset" class="btn btn-secondary mb-3">Annulla</a>
             </div>
         </form>
+
+        <div>
+            <?=
+            generate_password($password_length);
+            ?>
+        </div>
     </div>
 </body>
 
