@@ -1,9 +1,16 @@
 <?php
-$password_length = isset($_GET['password']) ?? '';
+$password_length = $_GET['password'] ?? '';
 function generate_password($length)
 {
-    $arr_character = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()[]';
-    return str_shuffle(str_repeat($arr_character, $length));
+    $all_character = str_split('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ^@#()[]&');
+    shuffle($all_character);
+    $password = '';
+    foreach ($all_character as $character) {
+        if (strlen($password) < $length) {
+            $password .= $character;
+        }
+    }
+    return $password;
 };
 ?>
 
