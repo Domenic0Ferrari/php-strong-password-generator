@@ -1,3 +1,7 @@
+<?php
+$arr_character = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()[]';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +16,13 @@
     <div class="container mt-5">
         <h1 class="text-center text-primary">Strong Password Generator</h1>
         <h2 class="text-center text-secondary">Genera una password sicura</h2>
-        <form class="row g-3 justify-content-center">
+
+        <form class="row g-3 justify-content-center align-items-center" method="get">
             <div class="col-auto">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Lunghezza password:">
+                <div>Lunghezza password:</div>
             </div>
             <div class="col-auto">
-                <input type="number" class="form-control" id="">
+                <input type="number" class="form-control" id="password" name="password">
             </div>
             <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3">Invia</button>
