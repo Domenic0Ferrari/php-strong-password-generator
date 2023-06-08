@@ -46,11 +46,13 @@ function generate_password($length)
             </div>
         </form>
 
-        <div>
+        <div class="alert alert-primary" role="alert">
+            Questa è la tua nuova password:
             <?=
             generate_password($password_length);
             ?>
         </div>
+
     </div>
 </body>
 
