@@ -9,6 +9,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Strong Password Generator</h1>
+        <h2 class="text-center text-secondary">Genera una password sicura</h2>
+        <form class="row g-3 justify-content-center">
+            <div class="col-auto">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Lunghezza password:">
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Invia</button>
+            </div>
+            <div class="col-auto">
+                <a href="/php-strong-password-generator" type="reset" class="btn btn-secondary mb-3">Annulla</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
